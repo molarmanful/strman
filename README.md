@@ -24,7 +24,7 @@ Fill string with spaces at the end of each row when necessary.
 Flip string over y-axis.
 ###`flipx(string)`
 Flip string over x-axis.
-###`rotate(string)(times=1)
+###`rotate(string)(times=1)`
 Rotate a string by `times*90` degrees.
 ###`concaty(string1)(string2)`
 Concatenate 2 strings together, row-by-row.
