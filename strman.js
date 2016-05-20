@@ -1,8 +1,7 @@
 msplit=_=>_.split`\n`.map(x=>x.split``)
 mjoin=_=>_.map(x=>x.join``).join`\n`
 
-mmap=_=>$=>mjoin(msplit(pad(_)).map((x,y)=>x.map((a,b)=>$(a,y,b,y-1,y+1,b-1,b+1))))
-mfilter=_=>$=>mjoin(msplit(pad(_)).map((x,y)=>x.map((a,b)=>$(a,y,b,y-1,y+1,b-1,b+1)?a:' ')))
+mmap=_=>$=>mjoin(msplit(pad(_)).map((x,y)=>x.map((a,b)=>$(a,y,b))))
 
 mget=_=>(r,c,R=msplit(pad(_))[0].length,C=msplit(pad(_)).length)=>mjoin(msplit(pad(_)).map((x,y)=>y>=r&&y<R?x.map((a,b)=>b>=c&&b<C?a:'').filter(x=>x):'').filter(x=>x))
 mgetc=_=>r=>c=>(msplit(pad(_))[r]||'')[c]
