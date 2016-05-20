@@ -4,7 +4,7 @@ mjoin=_=>_.map(x=>x.join``).join`\n`
 mmap=_=>$=>mjoin(msplit(pad(_)).map((x,y)=>x.map((a,b)=>$(a,y,b))))
 
 mget=_=>(r,c,R=msplit(pad(_))[0].length,C=msplit(pad(_)).length)=>mjoin(msplit(pad(_)).map((x,y)=>y>=r&&y<R?x.map((a,b)=>b>=c&&b<C?a:'').filter(x=>x):'').filter(x=>x))
-mgetc=_=>r=>c=>(msplit(pad(_))[r]||'')[c]
+mgetc=_=>(r,c)=>(msplit(pad(_))[r]||'')[c]
 mgety=_=>$=>msplit(pad(_)).map(x=>x[$]).join`\n`
 mgetx=_=>$=>msplit(pad(_))[$].join``
 
